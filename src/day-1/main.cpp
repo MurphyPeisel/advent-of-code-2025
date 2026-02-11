@@ -1,9 +1,6 @@
-#include <fstream>
 #include <iostream>
 #include <string>
 #include <unordered_map>
-
-using namespace std;
 
 /*
     The attached document (your puzzle input) contains a sequence of rotations,
@@ -26,12 +23,12 @@ int main() {
   int dialMagnitude = 0;
   int dialTurn = 0;
   char dialDirection = ' ';
-  string dialInput = "";
+  std::string dialInput = "";
 
-  istream &file = cin;
+  std::istream &file = std::cin;
 
   //   cout << "Dial position: " << dialPosition << endl;
-  while (getline(file, dialInput)) {
+  while (std::getline(file, dialInput)) {
     if (dialInput.empty()) {
       continue;
     };
@@ -48,12 +45,12 @@ int main() {
         ++password;
       }
     } else {
-      cerr << "Read an invalid character: " << dialDirection << endl;
+      std::cerr << "Read an invalid character: " << dialDirection << std::endl;
       return 1;
     }
   }
 
-  cout << "Password: " << password << endl;
+  std::cout << "Password: " << password << std::endl;
 
   return 0;
 }
