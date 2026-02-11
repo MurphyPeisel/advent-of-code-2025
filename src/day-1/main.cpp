@@ -27,7 +27,6 @@ int main() {
 
   std::istream &file = std::cin;
 
-  //   cout << "Dial position: " << dialPosition << endl;
   while (std::getline(file, dialInput)) {
     if (dialInput.empty()) {
       continue;
@@ -36,11 +35,7 @@ int main() {
     dialMagnitude = stoi(dialInput.substr(1));
     if (dialDirection == 'L' || dialDirection == 'R') {
       dialTurn = (dialDirection == 'L' ? -dialMagnitude : dialMagnitude);
-      //   cout << "Turning the dial " << dialMagnitude << " to the " <<
-      //   (dialDirection == 'L' ? "left" : "right")
-      //        << endl;
       dialPosition = (dialPosition + dialTurn + DIAL_SIZE) % DIAL_SIZE;
-      //   cout << "New dial position: " << dialPosition << endl;
       if (dialPosition == 0) {
         ++password;
       }
