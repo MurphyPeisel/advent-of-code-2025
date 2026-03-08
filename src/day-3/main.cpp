@@ -36,10 +36,9 @@ std::int64_t partOne(const std::vector<std::string> &allBanks) {
 std::int64_t partTwo(const std::vector<std::string> &allBanks) {
   int64_t totalJolts = 0;
 
-  // find the idx of the largest number with at least 11 numbers following it
+  // find the idx of the largest number with at least 11 numbers following
   // find the idx of the next largest number with at least 10 numbers following
-  // it find the idx of the next largest number with at least 9 numbers
-  // following it
+  // find the idx of the next largest number with at least 9 numbers following
   // ...
 
   for (const std::string &bankJolts : allBanks) {
